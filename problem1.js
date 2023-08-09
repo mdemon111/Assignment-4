@@ -31,7 +31,7 @@
 // problem-3
 
 // function sortMaker(arr) {
-//     if (arr.length !== 2) {
+//     if (!arr.length == 2) {
 //         return "Invalid input";
 //     }
 
@@ -49,31 +49,58 @@
 //     }
 // }
 
-// console.log(sortMaker([4, 2]));
+// console.log(sortMaker([4, 3]));
 // console.log(sortMaker([2, 2]));
 // console.log(sortMaker([4, -2]));
 
 
+
+
+
 // problem-4
-function findAddress(obj) {
-    const street = obj.street || "__street__";
-    const address = obj.house || "__house__";
-    const society = obj.society || "__society__";
+// function findAddress(obj) {
+//     const street = obj.street || "__";
+//     const house = obj.house || "__";
+//     const society = obj.society || "__";
 
-    const output = `street: ${street}\nAddress: ${address}\nsociety: ${society}`;
-    return output;
+//     const output = `street: ${street}\nhouse: ${house}\nsociety: ${society}`;
+//     return output;
     
+// }
+
+// const sampleObject = {
+//     street: 10,
+//     house: "15A",
+//     society: 'Earth Perfect'
+// };
+
+
+
+
+// let output = findAddress(sampleObject);
+// console.log(output)
+
+
+
+
+// problem-5
+
+function canPay(items, cost) {
+    if (items.length === 0) {
+        return "please provide a number";
+    }
+    
+    const totalCash = items.reduce((sum, item) => sum + item, 0);
+    
+    if (totalCash != cost) {
+        return true;
+    } else {
+        return false;
+    }
 }
+const khuchraTaka = [1, 2 ,5];
+const chipsPrich = 10;
 
-const sampleObject = {
-    street:10,
-    house: "15A",
-    society: 'Earth Perfect'
-};
-
-
-const output = findAddress(sampleObject);
-console.log(output);
-// {street: 10,house: 15A,society: “Earth
-//     Perfect”}
+const result = canPay(khuchraTaka)
+console.log(result);
 
